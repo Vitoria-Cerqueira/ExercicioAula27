@@ -31,13 +31,16 @@ abstract class Produto {
         return codigoDeBarras == produto.codigoDeBarras;
     }
 
-        public String buscarProduto(Produto cd1, List<Produto> listaDeProdutos){
-            for (int i = 0; i < listaDeProdutos.size(); i++) {
-                if (listaDeProdutos.get(i) == cd1){
-                    return "O produto está no indice " + listaDeProdutos.get(i);
-                }
+
+    public static String buscarProduto(Produto objeto, List<Produto> listaDeProdutos) {
+        for (int i = 0; i < listaDeProdutos.size(); i++) {
+            if (listaDeProdutos.get(i) == objeto) {
+                return "O produto está no indice " + i;
             }
-            return "Produto não encontrado";
         }
+        return "Produto não encontrado";
+    }
 
 }
+
+
